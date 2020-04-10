@@ -1,12 +1,15 @@
 #include <Arduino.h>
 
+unsigned int counter = 0;
+
 void setup()
 {
-    Serial.begin(9600);
+    SerialUSB.begin();    
 }
 
 void loop()
 {
-    Serial.println("Hello");
+    SerialUSB.println(counter);
     delay(1000);
+    counter++;
 }
